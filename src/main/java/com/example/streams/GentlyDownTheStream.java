@@ -54,7 +54,7 @@ public class GentlyDownTheStream {
 
         return fruits.stream()
                 .sorted()
-                .collect(Collectors.joining(","));
+                .collect(Collectors.joining(", "));
 
     }
 
