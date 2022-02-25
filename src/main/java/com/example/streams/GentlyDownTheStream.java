@@ -33,7 +33,7 @@ public class GentlyDownTheStream {
     public List<String> sortedFruitsException() {
 
         return fruits.stream()
-                .filter(x -> !x.startsWith("A"))
+                .filter(total -> !total.startsWith("A"))
                 .sorted()
                 .collect(Collectors.toList());
 
@@ -71,7 +71,7 @@ public class GentlyDownTheStream {
     public List<String> reverseSortedVeggiesInUpperCase() {
 
         return veggies.stream()
-                .sorted(Comparator.reverseOrder()).map(x -> x.toUpperCase())
+                .sorted(Comparator.reverseOrder()).map(num -> num.toUpperCase())
                 .collect(Collectors.toList());
 
     }
@@ -101,7 +101,7 @@ public class GentlyDownTheStream {
     public List<Integer> topTenUniqueOdd() {
 
         return integerValues.stream()
-                .filter(x -> x % 2 == 1)
+                .filter(number -> number % 2 == 1)
                 .sorted(Comparator.reverseOrder())
                 .distinct()
                 .limit(10)
@@ -113,7 +113,7 @@ public class GentlyDownTheStream {
     public Double average() {
 
         return integerValues.stream()
-                .mapToInt(i -> i)
+                .mapToInt(value -> value)
                 .average()
                 .getAsDouble();
 
